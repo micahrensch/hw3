@@ -4,4 +4,7 @@ class PlacesController < ApplicationController
     render :template => "places/index"
   end
 
+  def show
+    @place = Place.find_by({"id" => params["id"]})
+  end 
 end
