@@ -2,3 +2,15 @@
 
 <h1> <%= @place["name"]%> </h1>
 
+<h2>Activities</h2>
+
+<ul>
+  <% for entry in @entries %>
+    <li>
+        <%= entry["title"] %> 
+        <%= entry["description"]%>
+        <%= entry["posted_on"]%>
+    </li>
+  <% end %>
+</ul>
+  
